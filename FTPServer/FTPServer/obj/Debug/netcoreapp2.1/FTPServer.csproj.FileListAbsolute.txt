@@ -1,0 +1,44 @@
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.deps.json
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.pdb
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csprojAssemblyReference.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csproj.CoreCompileInputs.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.AssemblyInfoInputs.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.AssemblyInfo.cs
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.pdb
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.Localization.FtpReplies.resources
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.Localization.FtpReplies.fr.resources
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csproj.GenerateResource.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.deps.json
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csprojAssemblyReference.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.Localization.FtpReplies.resources
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.Localization.FtpReplies.fr.resources
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csproj.GenerateResource.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csproj.CoreCompileInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.AssemblyInfoInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.AssemblyInfo.cs
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.Localization.FtpReplies.resources
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.Localization.FtpReplies.fr.resources
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csproj.GenerateResource.cache
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csproj.CoreCompileInputs.cache
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.AssemblyInfoInputs.cache
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.AssemblyInfo.cs
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.deps.json
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\FTPServer.pdb
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.pdb
+D:\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.csprojAssemblyReference.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.1\FTPServer.pdb

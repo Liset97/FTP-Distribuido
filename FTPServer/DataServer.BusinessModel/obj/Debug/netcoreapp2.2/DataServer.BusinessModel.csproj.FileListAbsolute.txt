@@ -1,0 +1,26 @@
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.deps.json
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.csprojAssemblyReference.cache
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.csproj.CoreCompileInputs.cache
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.AssemblyInfoInputs.cache
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.AssemblyInfo.cs
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+D:\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.deps.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.csprojAssemblyReference.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.AssemblyInfoInputs.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.AssemblyInfo.cs
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.deps.json
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.csprojAssemblyReference.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.csproj.CoreCompileInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.AssemblyInfoInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.AssemblyInfo.cs
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 122\FTPServer\DataServer.BusinessModel\obj\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
