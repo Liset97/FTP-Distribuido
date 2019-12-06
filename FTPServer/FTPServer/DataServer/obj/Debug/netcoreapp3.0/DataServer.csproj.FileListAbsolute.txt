@@ -1,0 +1,11 @@
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp3.0\DataServer.exe
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp3.0\DataServer.deps.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp3.0\DataServer.runtimeconfig.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp3.0\DataServer.runtimeconfig.dev.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp3.0\DataServer.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp3.0\DataServer.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp3.0\DataServer.csprojAssemblyReference.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp3.0\DataServer.AssemblyInfoInputs.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp3.0\DataServer.AssemblyInfo.cs
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp3.0\DataServer.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp3.0\DataServer.pdb

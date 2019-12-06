@@ -1,0 +1,11 @@
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\bin\Debug\netcoreapp3.0\FTPServer.DAL.deps.json
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\bin\Debug\netcoreapp3.0\FTPServer.DAL.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\bin\Debug\netcoreapp3.0\FTPServer.DAL.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\bin\Debug\netcoreapp3.0\FTPServer.BusinessModel.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\bin\Debug\netcoreapp3.0\FTPServer.BusinessModel.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\obj\Debug\netcoreapp3.0\FTPServer.DAL.csprojAssemblyReference.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\obj\Debug\netcoreapp3.0\FTPServer.DAL.AssemblyInfoInputs.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\obj\Debug\netcoreapp3.0\FTPServer.DAL.AssemblyInfo.cs
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\obj\Debug\netcoreapp3.0\FTPServer.DAL.csproj.CopyComplete
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\obj\Debug\netcoreapp3.0\FTPServer.DAL.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer.DAL\obj\Debug\netcoreapp3.0\FTPServer.DAL.pdb

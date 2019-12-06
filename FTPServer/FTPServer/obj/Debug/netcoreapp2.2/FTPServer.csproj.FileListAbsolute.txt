@@ -16,3 +16,6 @@ C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.2\FTPS
 C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.2\FTPServer.DAL.pdb
 C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.2\FTPServer.BusinessModel.pdb
 C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\obj\Debug\netcoreapp2.2\FTPServer.csproj.CopyComplete
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.2\appsettings.json
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.2\FTPServer.runtimeconfig.json
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPServer\bin\Debug\netcoreapp2.2\FTPServer.runtimeconfig.dev.json

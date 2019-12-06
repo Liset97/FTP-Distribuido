@@ -10,6 +10,8 @@ namespace FTPServer.BusinessModel
 
         public string Name { get; set; }
 
+        public string PathName { get; set; }
+
         public DateTime UpdateDate { get; set; }
 
         public ICollection<Directory> Directories { get; set; }
@@ -17,6 +19,8 @@ namespace FTPServer.BusinessModel
         public ICollection<File> Files { get; set; }
 
         public Directory Parent { get; set; }
+
+        public bool IsDeleted { get; set; }
 
     }
 }

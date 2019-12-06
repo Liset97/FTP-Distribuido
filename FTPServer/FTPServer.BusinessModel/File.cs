@@ -10,10 +10,19 @@ namespace FTPServer.BusinessModel
 
         public string Name { get; set; }
 
+        public string PathName { get; set; }
+
         public DateTime UpdateDate { get; set; }
+
+        public string FileType { get; set; }
+
+        public string Length { get; set; }
 
         public Directory Parent { get; set; }
 
         public Guid ContentKey { get; set; }
+
+        public bool IsDeleted { get; set; }
+
     }
 }

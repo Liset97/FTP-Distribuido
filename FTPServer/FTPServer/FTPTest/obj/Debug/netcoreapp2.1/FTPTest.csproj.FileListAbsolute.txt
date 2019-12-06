@@ -1,0 +1,47 @@
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.deps.json
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.runtimeconfig.json
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.runtimeconfig.dev.json
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.pdb
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csprojAssemblyReference.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csproj.CoreCompileInputs.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.AssemblyInfoInputs.cache
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.AssemblyInfo.cs
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.pdb
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPServer.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPServer.pdb
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+E:\EstudioVacaciones\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csproj.CopyComplete
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.deps.json
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.runtimeconfig.json
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.runtimeconfig.dev.json
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPServer.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPServer.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csprojAssemblyReference.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csproj.CoreCompileInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.AssemblyInfoInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.AssemblyInfo.cs
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\v 1.0\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csproj.CopyComplete
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.deps.json
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.runtimeconfig.json
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.runtimeconfig.dev.json
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPTest.pdb
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPServer.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\FTPServer.pdb
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\bin\Debug\netcoreapp2.1\fr\FTPServer.resources.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csprojAssemblyReference.cache
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csproj.CoreCompileInputs.cache
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.AssemblyInfoInputs.cache
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.AssemblyInfo.cs
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.csproj.CopyComplete
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.dll
+D:\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\FTPTest\obj\Debug\netcoreapp2.1\FTPTest.pdb

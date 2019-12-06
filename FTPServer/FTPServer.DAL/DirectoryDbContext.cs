@@ -12,6 +12,8 @@ namespace FTPServer.DAL
 
         public DbSet<Directory> Directories { get; set; }
 
+        public DbSet<File> Files { get; set; }
+
         public DirectoryDbContext(IConfiguration config) : this("FTPServer", config) { }
 
         public DirectoryDbContext(string connectionStringName, IConfiguration config)

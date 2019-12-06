@@ -26,7 +26,7 @@ namespace FTPServer
         {
             private static readonly object _listLock = new object();
             private static Dictionary<AutoResetEvent, TcpListener> _listeners = new Dictionary<AutoResetEvent, TcpListener>();
-          
+
             public static TcpListener GetListener(IPAddress ip)
             {
                 TcpListener listener = null;
@@ -143,6 +143,8 @@ namespace FTPServer
 
         public event EventHandler<EventArgs> Disposed;
 
+        private int count;
+
         #region Private Fields
         private ILog _log = LogManager.GetLogger(typeof(ClientConnection));
 
@@ -192,7 +194,7 @@ namespace FTPServer
 
         private string ExpectedTerminator { get; set; } = "\r\n";
 
-        
+
 
         public void Dispose()
         {
@@ -306,7 +308,7 @@ namespace FTPServer
                         logEntry.Date = DateTime.Now;
                         break;
                     case "LIST":
-                        response = List(cmd.RawArguments ?? _currentDirectory);
+                        response = List(string.IsNullOrEmpty(cmd.RawArguments) ? _currentDirectory : cmd.RawArguments);
                         logEntry.Date = DateTime.Now;
                         break;
                     case "SYST":
@@ -500,16 +502,13 @@ namespace FTPServer
 
         #region Private Methods
 
-        public ClientConnection()
+        public ClientConnection(IConfiguration config)
         {
             _validCommands = new List<string>();
             _renameFrom = null;
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Environment.CurrentDirectory)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .Build();
 
             dbContext = new DirectoryDbContext(config);
+            dbContext.Database.EnsureCreated();
         }
 
         private void Read()
@@ -758,16 +757,56 @@ namespace FTPServer
             {
                 return _root;
             }
+
             else if (path.StartsWith("/", StringComparison.OrdinalIgnoreCase))
             {
-                path = new FileInfo(Path.Combine(_root, path.Substring(1))).FullName;
+                if (_currentDirectory == _root)
+                {
+                    path = string.Concat(_currentDirectory, path.Substring(1));
+                }
+                else
+                    path = string.Concat(_currentDirectory, "/", path.Substring(1));
             }
             else
             {
-                path = new FileInfo(Path.Combine(_currentDirectory, path)).FullName;
+                if (_currentDirectory == _root)
+                {
+                    path = string.Concat(_currentDirectory, path);
+                }
+                else
+                    path = string.Concat(_currentDirectory, "/", path);
             }
 
             return IsPathValid(path) ? path : null;
+        }
+
+        private Response AuxRename(string pathFrom, string pathTo)
+        {
+            var name = pathTo.Split("/").Last();
+            if (dbContext.Files.Where(x => x.PathName == pathFrom && !x.IsDeleted).Count() != 0)
+            {
+                var file = dbContext.Files.Where(x => x.PathName == pathFrom && !x.IsDeleted).First();
+                file.Name = name;
+                file.PathName = pathTo;
+                dbContext.SaveChanges();
+            }
+            else if (dbContext.Directories.Where(x => x.PathName == pathFrom && !x.IsDeleted).Count() != 0)
+            {
+                var directory = dbContext.Directories.Where(x => x.PathName == pathFrom && !x.IsDeleted).First();
+                directory.Name = name;
+                directory.PathName = pathTo;
+                foreach (var dir in dbContext.Directories.Where(x => x.Parent.Key == directory.Key && !x.IsDeleted))
+                    AuxRename(dir.PathName, string.Concat(pathTo, "/", dir.Name));
+                foreach (var file in dbContext.Files.Where(x => x.Parent.Key == directory.Key && !x.IsDeleted))
+                    AuxRename(file.PathName, string.Concat(pathTo, "/", file.Name));
+                dbContext.SaveChanges();
+            }
+            else
+            {
+                return GetResponse(Responses.FILE_ACTION_NOT_TAKEN);
+            }
+
+            return GetResponse(Responses.FILE_ACTION_COMPLETE);
         }
 
         private Response CheckUser()
@@ -826,7 +865,9 @@ namespace FTPServer
             {
                 _currentUser = user;
 
-                _root = Path.Combine("E:\\", _currentUser.HomeDir);
+                //var rootPath = Path.GetPathRoot(Environment.CurrentDirectory);
+                //_root = Path.Combine(rootPath, _currentUser.HomeDir);
+                _root = "/";
                 _currentDirectory = _root;
 
                 return GetResponse(Responses.LOGGED_IN);
@@ -848,7 +889,9 @@ namespace FTPServer
 
             if (_currentUser != null)
             {
-                _root = Path.Combine("E:\\", _currentUser.HomeDir);
+                //var rootPath = Path.GetPathRoot(Environment.CurrentDirectory);
+                //_root = Path.Combine(rootPath, _currentUser.HomeDir);
+                _root = "/";
                 _currentDirectory = _root;
 
                 return GetResponse(Responses.LOGGED_IN);
@@ -868,26 +911,15 @@ namespace FTPServer
         {
             if (pathname == "/")
             {
-                _root = Path.Combine("E:\\", _currentUser.HomeDir);
+                //var rootPath = Path.GetPathRoot(Environment.CurrentDirectory);
+                //_root = Path.Combine(rootPath, _currentUser.HomeDir);
+                _root = "/";
             }
             else
             {
-                string newDir;
-
-                if (pathname.StartsWith("/", StringComparison.OrdinalIgnoreCase))
+                if (dbContext.Directories.Where(x => x.PathName == pathname).Count() != 0)
                 {
-                    pathname = pathname.Substring(1).Replace('/', '\\');
-                    newDir = Path.Combine(_root, pathname);
-                }
-                else
-                {
-                    pathname = pathname.Replace('/', '\\');
-                    newDir = Path.Combine(_currentDirectory, pathname);
-                }
-
-                if (Directory.Exists(newDir))
-                {
-                    _currentDirectory = new DirectoryInfo(newDir).FullName;
+                    _currentDirectory = pathname;
 
                     if (!IsPathValid(_currentDirectory))
                     {
@@ -1110,6 +1142,7 @@ namespace FTPServer
 
             if (pathname != null)
             {
+
                 var state = new DataConnectionOperation { Arguments = pathname, Operation = StoreOperation };
 
                 SetupDataConnectionOperation(state);
@@ -1172,23 +1205,11 @@ namespace FTPServer
 
             renameFrom = NormalizeFilename(renameFrom);
             renameTo = NormalizeFilename(renameTo);
+            
 
             if (renameFrom != null && renameTo != null)
             {
-                if (File.Exists(renameFrom))
-                {
-                    File.Move(renameFrom, renameTo);
-                }
-                else if (Directory.Exists(renameFrom))
-                {
-                    Directory.Move(renameFrom, renameTo);
-                }
-                else
-                {
-                    return GetResponse(Responses.FILE_ACTION_NOT_TAKEN);
-                }
-
-                return GetResponse(Responses.FILE_ACTION_COMPLETE);
+                return AuxRename(renameFrom, renameTo);
             }
 
             return GetResponse(Responses.FILE_ACTION_NOT_TAKEN);
@@ -1205,9 +1226,10 @@ namespace FTPServer
 
             if (pathname != null)
             {
-                if (File.Exists(pathname))
+                if (dbContext.Files.Where(x => x.PathName == pathname && !x.IsDeleted).Count() != 0)
                 {
-                    File.Delete(pathname);
+                    dbContext.Files.Where(x => x.PathName == pathname && !x.IsDeleted).First().IsDeleted = true;
+                    dbContext.SaveChanges();
                 }
                 else
                 {
@@ -1231,9 +1253,10 @@ namespace FTPServer
 
             if (pathname != null)
             {
-                if (Directory.Exists(pathname))
+                if (dbContext.Directories.Where(x => x.PathName == pathname && !x.IsDeleted).Count() != 0)
                 {
-                    Directory.Delete(pathname);
+                    dbContext.Directories.Where(x => x.PathName == pathname && !x.IsDeleted).First().IsDeleted = true;
+                    dbContext.SaveChanges();
                 }
                 else
                 {
@@ -1257,9 +1280,19 @@ namespace FTPServer
 
             if (pathname != null)
             {
-                if (!Directory.Exists(pathname))
+                if (dbContext.Directories.Where(x => x.PathName == pathname && !x.IsDeleted).Count() == 0)
                 {
-                    Directory.CreateDirectory(pathname);
+                    var path = pathname.Split("/");
+                    var directory = new FTPServer.BusinessModel.Directory
+                    {
+                        PathName = pathname,
+                        Name = path.Last(),
+                        UpdateDate = DateTime.Now,
+                        Parent = dbContext.Directories.Where(x => x.PathName == _currentDirectory).First(),
+                    };
+
+                    dbContext.Directories.Add(directory);
+                    dbContext.SaveChanges();
                 }
                 else
                 {
@@ -1279,14 +1312,7 @@ namespace FTPServer
         /// <returns></returns>
         private Response PrintWorkingDirectory()
         {
-            string current = _currentDirectory.Replace(_root, string.Empty).Replace('\\', '/');
-
-            if (current.Length == 0)
-            {
-                current = "/";
-            }
-
-            return GetResponse(Responses.CURRENT_DIRECTORY.SetData(current));
+            return GetResponse(Responses.CURRENT_DIRECTORY.SetData(_currentDirectory));
         }
 
         private Response NameList(string pathname)
@@ -1313,7 +1339,6 @@ namespace FTPServer
         /// <returns></returns>
         private Response List(string pathname)
         {
-            pathname = NormalizeFilename(pathname);
 
             if (pathname != null)
             {
@@ -1472,7 +1497,7 @@ namespace FTPServer
 
         private void DoDataConnectionOperation(IAsyncResult result)
         {
-          
+
             HandleAsyncResult(result);
 
             DataConnectionOperation op = result.AsyncState as DataConnectionOperation;
@@ -1517,12 +1542,31 @@ namespace FTPServer
 
         private Response StoreOperation(NetworkStream dataStream, string pathname)
         {
-            long bytes = 0;
-
-            using (FileStream fs = new FileStream(pathname, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None, BUFFER_SIZE, FileOptions.SequentialScan))
+            var path = pathname.Split("/");
+            var info = path.Last().Split(".");
+            var file = new FTPServer.BusinessModel.File
             {
-                bytes = CopyStream(dataStream, fs);
+                Name = info[0],
+                PathName = _currentDirectory == _root ? string.Concat(_currentDirectory, info[0]) : string.Concat(_currentDirectory, "/", info[0]),
+                Length = "1000",
+                FileType = info[1],
+                UpdateDate = DateTime.Now,
+                Parent = dbContext.Directories.Where(x => x.PathName == _currentDirectory && !x.IsDeleted).Single(),
+            };
+            if (dbContext.Files.Where(x => x.Parent.Key == file.Parent.Key && x.Name == file.Name && !x.IsDeleted).Count() == 0)
+            {
+                dbContext.Files.Add(file);
+                dbContext.SaveChanges();
             }
+
+
+            long bytes = 0;
+            //using (FileStream fs = new FileStream(pathname, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None, BUFFER_SIZE, FileOptions.SequentialScan))
+            //{
+            //    bytes = CopyStream(dataStream, fs);
+            //}
+
+            //Falta transferir datos
 
             FtpLogEntry logEntry = new FtpLogEntry
             {
@@ -1570,56 +1614,90 @@ namespace FTPServer
 
             StreamWriter dataWriter = new StreamWriter(dataStream, _currentEncoding);
 
-            IEnumerable<string> directories = Directory.EnumerateDirectories(pathname);
+            var parentKey = dbContext.Directories.Where(x => x.PathName == pathname && !x.IsDeleted).Single().Key;
 
-            foreach (string dir in directories)
+            var directories = dbContext.Directories.Where(x => x.Parent.Key == parentKey && !x.IsDeleted);
+
+            foreach (var dir in directories)
             {
-                DateTime editDate = Directory.GetLastWriteTime(dir);
-
-                string date = editDate < now.Subtract(TimeSpan.FromDays(180)) ?
-                    editDate.ToString("MMM dd  yyyy", CultureInfo.InvariantCulture) :
-                    editDate.ToString("MMM dd HH:mm", CultureInfo.InvariantCulture);
-
+                var date = dir.UpdateDate < now.Subtract(TimeSpan.FromDays(180)) ?
+                           dir.UpdateDate.ToString("MMM dd  yyyy", CultureInfo.InvariantCulture) :
+                           dir.UpdateDate.ToString("MMM dd HH:mm", CultureInfo.InvariantCulture);
                 dataWriter.Write("drwxr-xr-x    2 2003     2003         4096 ");
                 dataWriter.Write(date);
                 dataWriter.Write(' ');
-                dataWriter.WriteLine(Path.GetFileName(dir));
+                dataWriter.WriteLine(dir.Name);
 
                 dataWriter.Flush();
             }
 
-            IEnumerable<string> files = Directory.EnumerateFiles(pathname);
-
-            foreach (string file in files)
+            var files = dbContext.Files.Where(x => x.Parent.Key == parentKey && !x.IsDeleted);
+            foreach (var file in files)
             {
-                FileInfo f = new FileInfo(file);
-
-                string date = f.LastWriteTime < now.Subtract(TimeSpan.FromDays(180)) ?
-                    f.LastWriteTime.ToString("MMM dd  yyyy", CultureInfo.InvariantCulture) :
-                    f.LastWriteTime.ToString("MMM dd HH:mm", CultureInfo.InvariantCulture);
+                var date = file.UpdateDate < now.Subtract(TimeSpan.FromDays(180)) ?
+                           file.UpdateDate.ToString("MMM dd  yyyy", CultureInfo.InvariantCulture) :
+                           file.UpdateDate.ToString("MMM dd HH:mm", CultureInfo.InvariantCulture);
 
                 dataWriter.Write("-rw-r--r--    2 2003     2003     ");
-
-                string length = f.Length.ToString(CultureInfo.InvariantCulture);
-
-                if (length.Length < 8)
-                {
-                    for (int i = 0; i < 8 - length.Length; i++)
-                    {
-                        dataWriter.Write(' ');
-                    }
-                }
-
-                dataWriter.Write(length);
+                dataWriter.Write(file.Length);
                 dataWriter.Write(' ');
                 dataWriter.Write(date);
                 dataWriter.Write(' ');
-                dataWriter.WriteLine(f.Name);
+                dataWriter.WriteLine(file.Name);
 
                 dataWriter.Flush();
-
-                f = null;
             }
+
+            //IEnumerable<string> directories = Directory.EnumerateDirectories(pathname);
+
+            //foreach (string dir in directories)
+            //{
+            //    DateTime editDate = Directory.GetLastWriteTime(dir);
+
+            //    string date = editDate < now.Subtract(TimeSpan.FromDays(180)) ?
+            //        editDate.ToString("MMM dd  yyyy", CultureInfo.InvariantCulture) :
+            //        editDate.ToString("MMM dd HH:mm", CultureInfo.InvariantCulture);
+
+            //    dataWriter.Write("drwxr-xr-x    2 2003     2003         4096 ");
+            //    dataWriter.Write(date);
+            //    dataWriter.Write(' ');
+            //    dataWriter.WriteLine(Path.GetFileName(dir));
+
+            //    dataWriter.Flush();
+            //}
+
+            //IEnumerable<string> files = Directory.EnumerateFiles(pathname);
+
+            //foreach (string file in files)
+            //{
+            //    FileInfo f = new FileInfo(file);
+
+            //    string date = f.LastWriteTime < now.Subtract(TimeSpan.FromDays(180)) ?
+            //        f.LastWriteTime.ToString("MMM dd  yyyy", CultureInfo.InvariantCulture) :
+            //        f.LastWriteTime.ToString("MMM dd HH:mm", CultureInfo.InvariantCulture);
+
+            //    dataWriter.Write("-rw-r--r--    2 2003     2003     ");
+
+            //    string length = f.Length.ToString(CultureInfo.InvariantCulture);
+
+            //    if (length.Length < 8)
+            //    {
+            //        for (int i = 0; i < 8 - length.Length; i++)
+            //        {
+            //            dataWriter.Write(' ');
+            //        }
+            //    }
+
+            //    dataWriter.Write(length);
+            //    dataWriter.Write(' ');
+            //    dataWriter.Write(date);
+            //    dataWriter.Write(' ');
+            //    dataWriter.WriteLine(f.Name);
+
+            //    dataWriter.Flush();
+
+            //    f = null;
+            //}
 
             FtpLogEntry logEntry = new FtpLogEntry
             {
@@ -1639,13 +1717,24 @@ namespace FTPServer
         {
             StreamWriter dataWriter = new StreamWriter(dataStream, _currentEncoding);
 
-            IEnumerable<string> files = Directory.EnumerateFiles(pathname);
+            var parentKey = dbContext.Directories.Where(x => x.PathName == pathname && !x.IsDeleted).Single().Key;
 
-            foreach (string file in files)
+            var files = dbContext.Files.Where(x => x.Parent.Key == parentKey && !x.IsDeleted);
+            foreach (var file in files)
             {
-                dataWriter.WriteLine(Path.GetFileName(file));
+                dataWriter.Write(file.Name);
+                dataWriter.WriteLine(file.FileType);
+
                 dataWriter.Flush();
             }
+
+            //IEnumerable<string> files = Directory.EnumerateFiles(pathname);
+
+            //foreach (string file in files)
+            //{
+            //    dataWriter.WriteLine(Path.GetFileName(file));
+            //    dataWriter.Flush();
+            //}
 
             FtpLogEntry logEntry = new FtpLogEntry
             {

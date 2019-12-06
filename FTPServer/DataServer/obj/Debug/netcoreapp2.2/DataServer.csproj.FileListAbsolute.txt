@@ -13,3 +13,4 @@ C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\Dat
 C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.DAL.pdb
 C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
 C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.csproj.CopyComplete
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\appsettings.json

@@ -133,7 +133,12 @@ namespace FTPServer
 
                 TcpClient client = listener.EndAcceptTcpClient(result);
 
-                var connection = new ClientConnection();
+                var config = new ConfigurationBuilder()
+                    .SetBasePath(Environment.CurrentDirectory)
+                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .Build();
+
+                var connection = new ClientConnection(config);
 
                 connection.Disposed += new EventHandler<EventArgs>(AsyncClientConnection_Disposed);
 

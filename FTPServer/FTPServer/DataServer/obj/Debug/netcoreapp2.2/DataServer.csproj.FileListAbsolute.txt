@@ -1,0 +1,15 @@
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.deps.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.runtimeconfig.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.runtimeconfig.dev.json
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.csprojAssemblyReference.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.AssemblyInfoInputs.cache
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.AssemblyInfo.cs
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.DAL.dll
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.DAL.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\bin\Debug\netcoreapp2.2\DataServer.BusinessModel.pdb
+C:\School\Works\Pablo\FTPServer\FTPServer\DataServer\obj\Debug\netcoreapp2.2\DataServer.csproj.CopyComplete

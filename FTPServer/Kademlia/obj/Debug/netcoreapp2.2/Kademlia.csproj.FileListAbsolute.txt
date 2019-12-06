@@ -1,0 +1,9 @@
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\bin\Debug\netcoreapp2.2\Kademlia.deps.json
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\bin\Debug\netcoreapp2.2\Kademlia.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\bin\Debug\netcoreapp2.2\Kademlia.pdb
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\obj\Debug\netcoreapp2.2\Kademlia.csprojAssemblyReference.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\obj\Debug\netcoreapp2.2\Kademlia.csproj.CoreCompileInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\obj\Debug\netcoreapp2.2\Kademlia.AssemblyInfoInputs.cache
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\obj\Debug\netcoreapp2.2\Kademlia.AssemblyInfo.cs
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\obj\Debug\netcoreapp2.2\Kademlia.dll
+D:\Universidad\4to Año\1er Semestre\Sistema Distribuido\Ultimo Pablo 28-11-2019\FTPServer\FTPServer\Kademlia\obj\Debug\netcoreapp2.2\Kademlia.pdb

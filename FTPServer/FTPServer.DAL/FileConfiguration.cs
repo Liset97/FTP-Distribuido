@@ -20,7 +20,16 @@ namespace FTPServer.DAL
             builder.Property(x => x.Name)
                 .IsRequired();
 
+            builder.Property(x => x.PathName)
+                .IsRequired();
+
             builder.Property(x => x.UpdateDate)
+                .IsRequired();
+
+            builder.Property(x => x.FileType)
+                .IsRequired();
+
+            builder.Property(x => x.Length)
                 .IsRequired();
 
             builder.Property(x => x.ContentKey)
@@ -29,6 +38,7 @@ namespace FTPServer.DAL
             builder.HasOne(x => x.Parent)
                 .WithMany(x => x.Files);
 
+            builder.Property(x => x.IsDeleted);
         }
     }
 }
